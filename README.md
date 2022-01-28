@@ -1,7 +1,7 @@
 # Check-anagram
 Este algoritmo identifica anagramas em uma lista de palavras.
 
-##funcionamento
+## funcionamento
 - Identifica em um array de string quais são anagrama.
 - Imprime uma lista array de anagramas e outro de não anagramas
 
