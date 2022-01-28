@@ -21,7 +21,7 @@ var arrayOrden = []
 
   */
 
-var listString = ["jose", "amor", "roma", "cachorro"] // Entrada
+var listString = ["thiago", "amor", "roma", "escada ", "mora", "gato", "cachorro", "omar"] // Entrada
 
 arrayOrden = arraySort(listString)
 anagram = filterAnagram(arrayOrden)
@@ -39,13 +39,8 @@ function arraySort(arr) {
         let strings = arr[i].split("").sort()
         let word = strings.join("")
         aux.push(word)
-       //console.log(arr[i].split(""))
-       //console.log(strings)
-
     }
-    //console.log(aux)
     return (aux)
-
 }
 
 // filtra o array ordenado por ordem alfabetica e compara cada elemento e retorna os que possuem igualdade
