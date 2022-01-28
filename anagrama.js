@@ -1,17 +1,31 @@
+/*
+Escreva um método para classificar um array de strings de forma que todos os anagramas fiquem próximos uns dos outros. Descarte todas strings que não são anagramas movendo-as para outro array, de modo que ao final você tenha dois arrays ordenados, um somente com strings que sejam anagramas e outro somente com strings que não sejam anagramas.
+
+Exemplo:
+Entrada: {"nata", "sorvete", "anta", "paralelepipedo", "tana"}
+Saidas: {"anta", "nata", "tana"}
+             {"paralelepipedo","sorvete"}
+
+*/ 
+
+
 
 var anagram = []
 var notAnagram = []
 var arrayOrden = []
+ /*
+  exemplos de entrada
+    ["jose", "galeria", "laranja", "alegria", "alergia", "gato", "cachorro", "regalia"]
+    ["jose", "galeria", "laranja", "alegria", "alergia", "gato",  "regalia", "amor", "roma", "cachorro", "mora", "morar", "omar"]
+    ["thiago", "amor", "roma", "escada ", "mora", "gato", "cachorro", "omar", "ator", "rato"]
 
-var listString = ["thiago", "amor", "roma", "escada ", "mora", "gato", "cachorro", "omar", "ramo"] // Entrada
+  */
+
+var listString = ["jose", "amor", "roma", "cachorro"] // Entrada
 
 arrayOrden = arraySort(listString)
 anagram = filterAnagram(arrayOrden)
 notAnagram = DifferenceBetweenArrays(listString, anagram, notAnagram)
-
-// console.log(arrayOrden )
-// console.log(anagrama)
-// console.log(notAnagrama)
 
 
 
@@ -25,9 +39,11 @@ function arraySort(arr) {
         let strings = arr[i].split("").sort()
         let word = strings.join("")
         aux.push(word)
+       //console.log(arr[i].split(""))
+       //console.log(strings)
 
     }
-    // console.log(aux)
+    //console.log(aux)
     return (aux)
 
 }
@@ -49,6 +65,7 @@ function filterAnagram(arr) {
     result = aux.filter(function (elem, pos, self) {
         return self.indexOf(elem) == pos;
     })
+    
     return (result)
 }
 
